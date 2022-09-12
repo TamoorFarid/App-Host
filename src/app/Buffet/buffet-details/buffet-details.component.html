@@ -1,0 +1,13 @@
+<div class="container my-5 py-5">
+  <h2 class="text-center my-2">Buffet Details</h2>
+  <div class="row text-white mt-2 rounded p-3" id="bg-buffet">
+    <div class="col-md-6 my-auto">
+      <h1>Time-slot :- {{buffet.slot}}</h1>
+      <h6>{{buffet.desc}}</h6>
+      <button class="btn btn-danger" routerLink="/buffet-payments" (click)="payments()">Book Now</button>
+    </div>
+    <div class="col-md-6 order-first order-md-last">
+      <img src="{{buffet.imgUrl}}" class="img-fluid rounded" alt="">
+    </div>
+  </div>
+</div>

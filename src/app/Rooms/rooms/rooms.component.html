@@ -1,0 +1,28 @@
+<div class="container p-5">
+  <div class="row my-5 rounded text-center p-3" id="bg-buffet">
+    <div class="col-md-6 my-auto">
+      <h1 class="text-white">Indulge yourself in the best hoteling experience.</h1>
+      <a class="btn p-2" id="btn">Explore Now!</a>
+    </div>
+    <div class="col-md-6 order-first order-md-last ">
+      <img src="/assets/images/rooms-banner.jpg" class="img-fluid rounded ms-md-3 " alt="">
+    </div>
+  </div>
+  <h1 class="text-dark text-center p-1">Rooms</h1>
+    <div class="row">
+      <div class="card m-2 shadow" *ngFor="let room of rooms" style="width: 18rem;">
+        <img src="{{room.imgUrl}}" class="card-img-top"  alt="product img">
+        <div class="card-body">
+          <h4 class="card-title">{{room.name}}</h4>
+          <h5 class="card-title">Rent/night :{{room.rent}}$</h5>
+          <p class="card-text">Description: {{room.desc}}</p>
+          <a class="btn btn-danger" routerLink="/rooms/{{room.id}}">Book now</a>
+
+        </div>
+      </div>
+</div>
+
+
+
+</div>
+

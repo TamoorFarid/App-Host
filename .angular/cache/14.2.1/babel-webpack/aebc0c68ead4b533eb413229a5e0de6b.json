@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AuthService {\n  constructor() {\n    this.isLoggedIn = false;\n  }\n\n  logIn() {\n    this.isLoggedIn = true;\n  }\n\n  logOut() {\n    this.isLoggedIn = false;\n  }\n\n  isAuthenticated() {\n    return this.isLoggedIn;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

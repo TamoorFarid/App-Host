@@ -1,0 +1,28 @@
+<div class="container-lg mt-5" >
+    <div class="row">
+        <div *ngIf="isSignedUp ==true" class="alert alert-primary mt-3" role="alert">
+            You are Successfully Signed Up! 
+          </div>
+        <div class="col-md-6 mx-auto my-5">
+
+        <h1 class="bg-dark text-white rounded text-center p-1" id="bg-buffet">Sign Up</h1>
+        <form class=" p-4 rounded" id="bg-buffet" [formGroup]="signupform">
+          <label class="form-label text-muted">Email</label>
+          <input formControlName="email" type="email" class="form-control">
+          <mat-error class="text-white" *ngIf="signupform.controls.email.errors?.['required']">Email is required!</mat-error>
+          <mat-error class="text-white" *ngIf="signupform.controls.email.errors?.['email']">Enter a valid Email Address</mat-error>
+          <br><label class="form-label text-muted">Password</label>
+          <input formControlName="password" type="password" class="form-control" >
+          <mat-error class="text-white" *ngIf="signupform.controls.password.errors?.['required']">Password is required!</mat-error><br>
+          <mat-error class="text-white" *ngIf="signupform.controls.password.errors?.['pattern']">Password must be 8 characters long with special cases.</mat-error><br>
+          <br><label class="form-label text-muted">Confirm Password</label>
+          <input formControlName="confirmPassword" type="password" class="form-control" >
+          <mat-error class="text-white" *ngIf="signupform.controls.confirmPassword.errors?.['required']">Password is required!</mat-error><br>
+          <button [disabled]="!signupform.valid" class="rounded p-2 mx-auto my-2" id="btn" (click)="signup()">Signup</button>
+        </form>
+      </div>
+  
+    </div>
+  </div>
+  
+  

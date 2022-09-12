@@ -1,0 +1,21 @@
+<div class="container-lg mt-5">
+  
+  <div class="row">
+    <div class="alert alert-primary mt-3" *ngIf="alert==true" role="alert">
+      You have booked a room for one night!
+    </div>
+    <div class="border text-white rounded shadow p-3 my-5 col-md-6 mx-auto" id="bg-buffet">
+      <h1 class="text-center">Billing Details</h1>
+      <form>
+        <label class="form-label">Room Name</label>
+        <input type="text" value="{{roomRent.name}}" readonly class="form-control">
+        <label class="form-label"> Description</label>
+        <textarea name="" readonly class="form-control" cols="30" rows="10">{{roomRent.desc}}</textarea>
+        <label class="form-label">Rent</label>
+        <input type="text" value="{{roomRent.rent | currency}}" readonly class="form-control">
+        <br><label class="form-label">Total charges:</label><br>
+        <a class="btn btn-danger" (click)="payed()">Pay:{{roomRent.rent | currency}}</a>
+      </form>
+    </div>
+  </div>
+</div>

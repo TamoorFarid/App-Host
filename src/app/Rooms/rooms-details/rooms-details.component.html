@@ -1,0 +1,14 @@
+<div class="container-lg p-5 mt-5">
+  <div class="row py-1 rounded" id="bg-buffet">
+    <div class="col-md-6 my-5 ">
+      <h2 class="text-center text-white">Room Details</h2>
+      <img src="{{rooms.imgUrl}}" class="img-fluid rounded" alt="">
+    </div>
+    <div class="col-md-6 my-auto">
+      <h1 style="display:inline-block; border-bottom:2px solid black;">{{rooms.name}}</h1>
+      <h2 class="text-muted">{{rooms.desc}}</h2>
+      <h5 class="text-danger">Rent/Night: {{rooms.rent | currency}}</h5>
+      <a class="btn btn-danger" (click)="addToPayment()">Pay Now</a>
+    </div>
+  </div>
+</div>

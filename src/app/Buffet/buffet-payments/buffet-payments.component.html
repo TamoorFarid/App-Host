@@ -1,0 +1,18 @@
+<div class="container-lg mt-5">
+
+  <div class="row">
+    <div class="alert alert-primary mt-3" *ngIf="alert==true" role="alert">
+      You have booked a slot for Buffet at {{buffetPayments.slot}}
+    </div>
+    <div class="border text-white rounded shadow p-3 my-5 col-md-6 mx-auto" id="bg-buffet">
+      <h1 class="text-center">Booking Details</h1>
+      <form>
+        <label class="form-label">Buffet Slot</label>
+        <input type="text" value="{{buffetPayments.slot}}" readonly class="form-control">
+        <label class="form-label"> Description</label>
+        <textarea name="" readonly class="form-control" cols="30" rows="10">{{buffetPayments.desc}}</textarea>
+        <a class="btn btn-danger my-1" (click)="book()">Book Now</a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container-lg mt-5 py-5" >
+  <h1 id="header" class="text-center fw-bold my-1">Buffet</h1>
+  <div *ngFor="let buffets of buffet" class="row text-white my-2 rounded p-3" id="bg-buffet">
+  <div class="col-md-6 my-auto">
+    <h1>Time-slot :- {{buffets.slot}}</h1>
+    <h6>{{buffets.desc}}</h6>
+    <button class="btn btn-danger" routerLink="/buffet/{{buffets.id}}">Book Now</button>
+  </div>
+  <div class="col-md-6 order-first order-md-last">
+    <img src="{{buffets.imgUrl}}" class="img-fluid rounded" alt="">
+  </div>
+</div>
+</div>
